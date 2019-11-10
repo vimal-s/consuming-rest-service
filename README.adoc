@@ -1,0 +1,33 @@
+An application that consumes a RESTful web service.
+
+== What It Does
+
+The application uses Spring's `RestTemplate` to retrieve a random Spring Boot quotation
+at https://gturnquist-quoters.cfapps.io/api/random.
+
+[[initial]]
+== Fetching a REST Resource
+
+A RESTful service at https://gturnquist-quoters.cfapps.io/api/random randomly fetches
+quotations about Spring Boot and returns them as JSON documents that looks something like this:
+
+====
+[source,javascript]
+----
+{
+   type: "success",
+   value: {
+      id: 10,
+      quote: "Really loving Spring Boot, makes stand alone Spring apps easy."
+   }
+}
+----
+====
+
+== Running the Application
+
+Output similar to the following but with a random quotation:
+
+....
+2019-08-22 14:06:46.506  INFO 42940 --- [           main] c.e.c.ConsumingRestApplication           : Quote{type='success', value=Value{id=1, quote='Working with Spring Boot is like pair-programming with the Spring developers.'}}
+....
