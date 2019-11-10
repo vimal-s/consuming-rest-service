@@ -2,7 +2,7 @@ package com.example.consumingrestservice.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonIgnoreProperties(ignoreUnknown = true)     // don't understand the use of this, works same if removed
 public class Quote {
 
     private String type;
